@@ -155,37 +155,54 @@ def aufgabe_024_quadrate(zahlen: list[int]) -> list[int]:
 # Gruppe: Nikita, Simon
 def aufgabe_025_unique_werte(zahlen: list[int]) -> list[int]:
     """Entferne Duplikate, erhalte die erste Reihenfolge."""
-    pass
+    gesehen = set()
+    ergebnis = []
+
+    for zahl in zahlen:
+        if zahl not in gesehen:
+            gesehen.add(zahl)
+            ergebnis.append(zahl)
+
+    return ergebnis
 
 
 # Gruppe: Nikita, Simon
 def aufgabe_026_finde_index(werte: list[str], wert: str) -> int:
     """Finde den Index von wert, -1 wenn nicht vorhanden."""
-    pass
+    for index, element in enumerate(werte):
+        if element == wert:
+            return index
+    return -1
 
 
 # Gruppe: Nikita, Simon
 def aufgabe_027_teilliste(werte: list[int], start: int, ende: int) -> list[int]:
     """Gib eine Teilliste von start (inkl.) bis ende (exkl.) zurück."""
-    pass
+    return werte[start:ende]
 
 
 # Gruppe: Nikita, Simon
 def aufgabe_028_zaehle_vorkommen(werte: list[str], gesucht: str) -> int:
     """Zähle, wie oft gesucht in der Liste vorkommt."""
-    pass
+    return werte.count(gesucht)
 
 
 # Gruppe: Nikita, Simon
 def aufgabe_029_drehe_liste(werte: list[Any]) -> list[Any]:
     """Drehe die Reihenfolge der Liste um."""
-    pass
+    return werte[::-1]
 
 
 # Gruppe: Nikita, Simon
 def aufgabe_030_flatten(liste_von_listen: list[list[int]]) -> list[int]:
     """Führe eine verschachtelte Liste zu einer flachen Liste zusammen."""
-    pass
+    ergebnis = []
+
+    for teilliste in liste_von_listen:
+        for element in teilliste:
+            ergebnis.append(element)
+
+    return ergebnis
 
 
 # Gruppe: Nikita, Simon
