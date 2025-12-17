@@ -199,6 +199,9 @@ def aufgabe_030_flatten(liste_von_listen: list[list[int]]) -> list[int]:
     ergebnis = []
 
     for teilliste in liste_von_listen:
+        if teilliste is None:
+            continue
+
         for element in teilliste:
             ergebnis.append(element)
 
